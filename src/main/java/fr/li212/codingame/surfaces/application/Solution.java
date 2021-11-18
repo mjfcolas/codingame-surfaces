@@ -1,6 +1,5 @@
 package fr.li212.codingame.surfaces.application;
 
-import fr.li212.codingame.surfaces.application.io.PrintCodingameGameInput;
 import fr.li212.codingame.surfaces.domain.FindAllLakes;
 import fr.li212.codingame.surfaces.domain.models.GameInput;
 import fr.li212.codingame.surfaces.domain.models.grid.Cell;
@@ -12,13 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
 class Solution {
 
-    private static final FindAllLakes FIND_ALL_LAKES = new FindAllLakes(new PrintCodingameGameInput());
+    private static final FindAllLakes FIND_ALL_LAKES = new FindAllLakes();
 
     public static void main(final String[] args) {
         Scanner in = new Scanner(System.in);
@@ -40,9 +35,7 @@ class Solution {
         final List<Coordinate> coordinatesToFind = new ArrayList<>();
         int N = in.nextInt();
         for (int i = 0; i < N; i++) {
-            int X = in.nextInt();
-            int Y = in.nextInt();
-            coordinatesToFind.add(new Coordinate(X, Y));
+            coordinatesToFind.add(new Coordinate(in.nextInt(), in.nextInt()));
         }
 
         final GameInput input = new GameInput(new Grid(grid), coordinatesToFind);

@@ -31,9 +31,4 @@ public class Coordinate {
     public int hashCode() {
         return Objects.hash(x, y);
     }
-
-    @Override
-    public String toString() {
-        return String.format("(X,Y)= (%d,%d)", x, y);
-    }
 }

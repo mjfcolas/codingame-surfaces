@@ -1,7 +1,6 @@
 package fr.li212.codingame.surfaces.domain.models.grid;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Grid {
@@ -60,19 +59,7 @@ public class Grid {
         return cells;
     }
 
-    public Cell getCell(final Coordinate coordinate){
+    public Cell getCell(final Coordinate coordinate) {
         return cells[coordinate.getX()][coordinate.getY()];
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder result = new StringBuilder();
-        for(int y = 0; y < cells[0].length; y++){
-            for (final Cell[] cell : cells) {
-                result.append(cell[y].isWater() ? "o" : "#");
-            }
-            result.append('\n');
-        }
-        return result.toString();
     }
 }

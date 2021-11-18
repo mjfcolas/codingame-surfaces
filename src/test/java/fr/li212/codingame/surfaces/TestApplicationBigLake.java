@@ -1,21 +1,17 @@
 package fr.li212.codingame.surfaces;
 
-import fr.li212.codingame.surfaces.application.io.PrintCodingameGameInput;
 import fr.li212.codingame.surfaces.domain.models.GameInput;
 import fr.li212.codingame.surfaces.domain.models.grid.Cell;
 import fr.li212.codingame.surfaces.domain.models.grid.CellType;
 import fr.li212.codingame.surfaces.domain.models.grid.Coordinate;
 import fr.li212.codingame.surfaces.domain.models.grid.Grid;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class TestApplicationBigLake {
 
-    private static final fr.li212.codingame.surfaces.domain.FindAllLakes FIND_ALL_LAKES = new fr.li212.codingame.surfaces.domain.FindAllLakes(new PrintCodingameGameInput());
+    private static final fr.li212.codingame.surfaces.domain.FindAllLakes FIND_ALL_LAKES = new fr.li212.codingame.surfaces.domain.FindAllLakes();
 
     private static final String GRID_STRING = generateGrid();
 
@@ -43,7 +39,7 @@ public class TestApplicationBigLake {
         final StringBuilder result = new StringBuilder();
         for (int y = 0; y < 1000; y++) {
             for (int x = 0; x < 1000; x++) {
-                    result.append("o");
+                result.append("o");
             }
             result.append("\n");
         }

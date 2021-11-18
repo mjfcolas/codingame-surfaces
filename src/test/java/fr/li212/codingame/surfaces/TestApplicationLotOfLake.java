@@ -1,6 +1,5 @@
 package fr.li212.codingame.surfaces;
 
-import fr.li212.codingame.surfaces.application.io.PrintCodingameGameInput;
 import fr.li212.codingame.surfaces.domain.models.GameInput;
 import fr.li212.codingame.surfaces.domain.models.grid.Cell;
 import fr.li212.codingame.surfaces.domain.models.grid.CellType;
@@ -13,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class TestApplicationLotOfLake {
 
-    private static final fr.li212.codingame.surfaces.domain.FindAllLakes FIND_ALL_LAKES = new fr.li212.codingame.surfaces.domain.FindAllLakes(new PrintCodingameGameInput());
+    private static final fr.li212.codingame.surfaces.domain.FindAllLakes FIND_ALL_LAKES = new fr.li212.codingame.surfaces.domain.FindAllLakes();
 
     private static final String GRID_STRING = generateGrid();
 
